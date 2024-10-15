@@ -1,0 +1,80 @@
+.post-container {
+    border: 1px solid #1DA1F2;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1DA1F2;
+}
+
+.post-likes {
+    font-size: 1rem;
+    color: #333;
+}
+
+.post-actions {
+    display: flex;
+}
+
+.post-button {
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    background-color: #0F85E4;
+}
+
+.post-comments {
+    margin-top: 10px;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-item {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #1DA1F2;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comment-button {
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment-button:hover {
+    background-color: #0F85E4;
+}

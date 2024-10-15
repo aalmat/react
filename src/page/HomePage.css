@@ -1,0 +1,87 @@
+/* HomePage.css */
+.home-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+}
+
+.home-page h1 {
+    font-size: 1.5rem;
+    color: #1DA1F2;
+}
+
+/* Styling for each Post component */
+.post-container {
+    border: 1px solid #1DA1F2;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.post-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.post-likes {
+    font-size: 1rem;
+    color: #666;
+}
+
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.post-button {
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    background-color: #0F85E4;
+}
+
+.comment-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.comment-item {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #1DA1F2;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comment-button {
+    background-color: #1DA1F2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.comment-button:hover {
+    background-color: #0F85E4;
+}
