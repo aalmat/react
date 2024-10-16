@@ -1,33 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Profile.css';
 
 const Profile = () => {
     const [userInfo, setUserInfo] = useState({
-        name: 'John',
-        surname: 'Doe',
-        birthday: '1990-01-01',
-        email: 'john.doe@example.com',
+        name: 'Almat',
+        surname: 'M',
+        birthday: '2004-05-26',
+        email: 'aaa@example.com',
         password: '********',
         profilePicture: null,
     });
 
     const [errors, setErrors] = useState({});
 
+    useEffect(() => {
+        const savedUserInfo = localStorage.getItem('userInfo');
+        if (savedUserInfo) {
+            setUserInfo(JSON.parse(savedUserInfo));
+        }
+    }, []);
+
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setUserInfo({
-            ...userInfo,
+        setUserInfo((prev) => ({
+            ...prev,
             [name]: value,
-        });
+        }));
     };
 
     const handleFileInputChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setUserInfo({
-                ...userInfo,
+            setUserInfo((prev) => ({
+                ...prev,
                 profilePicture: file,
-            });
+            }));
         }
     };
 
@@ -44,7 +51,8 @@ const Profile = () => {
         const newErrors = validateForm();
         if (Object.keys(newErrors).length === 0) {
             setErrors({});
-            console.log(userInfo);
+            localStorage.setItem('userInfo', JSON.stringify(userInfo));
+            console.log('Saved to localStorage:', userInfo);
         } else {
             setErrors(newErrors);
         }
@@ -122,4 +130,4 @@ const Profile = () => {
     );
 };
 
-export default Profile;
+export default React.memo(Profile);
