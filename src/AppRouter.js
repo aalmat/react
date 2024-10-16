@@ -11,7 +11,7 @@ const AppRouter = () => {
     return (
         <Router>
             <Routes>
-                <Route exact path="/combo" element={<combo/>} />
+                <Route exact path="/combo" element={<Combo/>} />
                 <Route path="/profile" element={<Profile/>} />
                 <Route path="/login" element={<Auth/>} />
                 <Route path="/" element={<Home/>} />

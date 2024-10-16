@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
             </main>
 
             <footer>
-                <p>Footer content</p>
+                <p></p>
             </footer>
         </div>
     );

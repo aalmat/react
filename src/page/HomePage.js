@@ -20,7 +20,8 @@ const HomePage = () => {
             {memoizedCombos.map(combo => (
                 <Combo
                     key={combo.comboId}
-                    postId={combo.comboId}
+                    comboId={combo.comboId}
+                    price={combo.price}
                     title={combo.title}
                     onDelete={handleDeleteCombo}
                 />

@@ -3,6 +3,7 @@ import './Combo.css'
 
 const Combo = ({ comboId, title, onDelete }) => {
     const [likes, setLikes] = useState(0);
+    const [price] = useState(100);
     const [comments, setComments] = useState([]);
     const [newComment, setNewComment] = useState('');
 
@@ -19,9 +20,11 @@ const Combo = ({ comboId, title, onDelete }) => {
         onDelete(comboId);
     };
 
+
     return (
         <div style={{ border: '1px solid #ccc', padding: '10px', marginBottom: '10px' }}>
             <h3>{title}</h3>
+            <h3>{price}</h3>
             <p>Likes: {likes}</p>
             <button onClick={handleLike}>Like</button>
             <button onClick={handleDelete}>Delete</button>
